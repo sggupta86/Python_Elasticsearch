@@ -1,8 +1,6 @@
 import json
 from elasticsearch import Elasticsearch
-es_host="https://ekta-demo.es.us-central1.gcp.cloud.es.io:9243"
-es_user="elastic"
-es_password="eWEs05nQlvlF91hRpVMiDF5u"
+from configele import*
 my_instance= Elasticsearch(es_host,http_auth=(es_user,es_password),use_ssl=True, verify_certs=False)
 
 if not my_instance:
